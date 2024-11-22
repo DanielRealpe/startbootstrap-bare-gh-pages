@@ -1,0 +1,163 @@
+body {
+    background-color: #ff9443;
+    font-size: 90% !important  
+}
+
+/* Estilo para el encabezado */
+header {
+    background-color: #ff9443;
+}
+
+/* Estilo para la línea superior */
+.header-top {
+    border-bottom: 1px solid #000000;
+    background-color: #ff9443;
+}
+
+.company-logo img {
+    width: 100px; /* Tamaño ajustado */
+    height: 100px; /* Asegurar que sea completamente circular */
+    border-radius: 50%; /* Totalmente circular */
+    object-fit: cover; /* Mantener la proporción sin deformar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.user-profile img {
+    width: 100px; /* Tamaño ajustado al botón */
+    height: 100px; /* Mantener proporción circular */
+    border-radius: 50%; /* Totalmente circular */
+    object-fit: cover; /* Asegura que se recorte adecuadamente */
+}
+
+.container-fluid.custom-width {
+    padding-left: 2px;
+    padding-right: 2px;
+    max-width: 98%;
+    /* Ajusta el ancho según tus necesidades */
+}
+
+.cerrar-sesion {
+    font-size: 90%; /* Ajustar texto al tamaño del ícono */
+    padding: 5px 10px; /* Ajustar espacio interno */
+    display: flex; /* Alineación */
+    align-items: center;
+    gap: 5px; /* Espacio entre ícono y texto */
+}
+
+
+/* Centrado y estilo de los títulos en el navbar */
+.nav-titles {
+    display: flex;
+    gap: 20px;
+    /* Espaciado uniforme entre los títulos */
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    font-size: 90%;
+    /* Tamaño de los enlaces */
+    padding: 0.5rem 1rem;
+    color: #000000;
+    text-align: center;
+}
+
+.navbar-nav .nav-item+.nav-item .nav-link {
+    border-left: 1px solid #000000;
+    /* Línea divisoria entre enlaces */
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #007bff;
+    /* Cambia este color según prefieras */
+    border-bottom: 2px solid #007bff;
+    /* Añade un borde inferior para destacar */
+}
+
+/* Nuevos estilos para las pestañas laterales */
+.tab-container {
+    margin-top: 20px;
+    display: flex;
+    background-color: #ffffff;
+}
+
+.nav-tabs {
+    flex-direction: column;
+    border-right: 1px solid #dee2e6;
+    border-bottom: none;
+    padding-top: 10px;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 0;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    color: #495057;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #f8f9fa;
+}
+
+.nav-tabs .nav-link.active {
+    color: #007bff;
+    background-color: #e9ecef;
+    border-right: 3px solid #007bff;
+}
+
+.tab-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.divider {
+    width: 100%;
+    margin: 1rem 0;
+    height: 1px;
+    background-color: #000000;
+}
+
+/* Modal con fondo oscuro y bordes redondeados */
+.modal-content {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Fondo oscuro con opacidad */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Sombra suave */
+.shadow-lg {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos más suaves y más grandes */
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+
+/* Animación suave en el modal */
+.modal.fade .modal-dialog {
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+

@@ -1,0 +1,125 @@
+<div class="d-flex align-items-center gap-4 mb-3">
+    <button class="btn btn-danger">Volver</button>
+    <button class="btn btn-primary">Ir a ventas</button>
+</div>
+
+<div class="divider mb-3"></div>
+
+<form id="registroForm" action="#" method="POST" onsubmit="registrarCliente(event)">
+    <div class="row">
+        <!-- Columna 1 -->
+        <div class="col-4">
+            <!-- Nombre -->
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input id="nombre" type="text" placeholder="Ingrese el nombre completo" class="form-control form-control-sm w-100">
+            </div>
+            <div id="nombreError" class="text-danger mt-1" style="font-size: 0.875rem;"></div>
+            <!-- Tipo y N° Doc -->
+            <div class="d-flex align-items-center gap-2 mb-2">
+                    <div class="flex-grow-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <label for="Tipo. Doc" class="form-label">Tipo:</label>
+                            <select name="Tipo. Doc" id="tipoDoc" class="form-select form-select-sm w-100">
+                                <option value="Null">Seleccione</option>
+                                <option value="TI">TI</option>
+                                <option value="CC">CC</option>
+                            </select>
+                        </div>
+                        <div id="tipoDocError" class="text-danger mt-1" style="font-size: 0.875rem;"></div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="d-flex align-items-center gap-2">
+                            <label for="numeroDoc" class="form-label">N°Doc:</label>
+                            <input type="text" id="numeroDoc" placeholder="Ingrese el N° Doc"
+                                class="form-control form-control-sm w-100">
+                            </div>
+                            <div id="numeroDocError" class="text-danger mt-1" style="font-size: 0.875rem;"></div>
+                    </div>
+                </div>
+            <!-- Contraseña -->
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <label for="contrasena" class="form-label">Contraseña:</label>
+                <input id="contrasena" type="password" placeholder="Ingrese la contraseña" class="form-control form-control-sm w-100">
+            </div>
+            <div id="contrasenaError" class="text-danger mt-1" style="font-size: 0.875rem;"></div>
+        </div>
+        <!-- Columna 2 -->
+        <div class="col-4">
+            <!-- Teléfono -->
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <label for="telefono" class="form-label">Teléfono:</label>
+                <input id="telefono" type="text" placeholder="Ingrese el teléfono" class="form-control form-control-sm w-100">
+            </div>
+            <div id="telefonoError" class="text-danger mt-1" style="font-size: 0.875rem;"></div>
+            <!-- Dirección -->
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <label for="direccion" class="form-label">Dirección:</label>
+                <input id="direccion" type="text" placeholder="Ingrese la dirección" class="form-control form-control-sm w-100">
+            </div>
+            <div id="direccionError" class="text-danger mt-1" style="font-size: 0.875rem;"></div>
+            <!-- Confirmar Contraseña -->
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <label for="confirmarContrasena" class="form-label">Confirmar:</label>
+                <input id="confirmarContrasena" type="password" placeholder="Confirma la contraseña" class="form-control form-control-sm w-100">
+            </div>
+            <div id="confirmarContrasenaError" class="text-danger mt-1" style="font-size: 0.875rem;"></div>
+        </div>
+        <!-- Columna 3 -->
+        <div class="col-4">
+            <!-- Estado Switch -->
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <label for="estado" class="form-label">Estado:</label>
+                <div class="form-check form-switch">
+                    <input id="estado" class="form-check-input" type="checkbox">
+                </div>
+                <div id="estadoError" class="text-danger mt-1" style="font-size: 0.875rem;"></div>
+            </div>
+            <!-- Botón de Registro -->
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <button type="submit" class="btn btn-warning" id="jol">Registrar</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Registro Exitoso</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¡El cliente ha sido registrado correctamente!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="divider"></div>
+<div class="d-flex align-items-center gap-2 mb-2">
+    <input type="text" class="form-control w-25" placeholder="Buscar..." id="busqueda">
+    <button class="btn btn-primary">Buscar</button>
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre completo</th>
+                <th>Tipo de Documento</th>
+                <th>Documento</th>
+                <th>Teléfono</th>
+                <th>Direccion</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyClientes">
+        </tbody>
+    </table>
+</div>
